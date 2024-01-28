@@ -31,3 +31,33 @@ body {
     text-wrap: balance;
   }
 }
+
+.settings {
+  border-radius: 50%;
+  animation: rotateRing 5s linear infinite;
+}
+
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-large-button {
+  padding: 10px;
+}
+
+.toggle-scale-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle-scale-circle.scaled {
+  transform: scale(1.5);
+}
