@@ -26,7 +26,7 @@ export default function Home() {
     setModal(!modal);
   }
   return (
-      <div className={`${isDarkMode ? "!bg-[#3C424D]"  : "!bg-white"} relative transition-all duration-700 h-screen`}>
+      <div className={`${isDarkMode ? "!bg-[#3C424D]"  : "!bg-white"} relative transition-all duration-700 min-h-[100vh]`}>
         <Header isDarkMode={isDarkMode}/>
         <div className={`py-5 px-5 md:px-0 ${isDarkMode ? "!bg-[#3C424D] border-b-[#6B7589] border-b-[1px]"  : "!bg-white"} transition-all duration-700`}>
           <div className={"container mx-auto flex justify-between items-center"}>
@@ -232,7 +232,7 @@ export default function Home() {
                 }
             />
 
-            {!modal && <div className={`${modal ? "translate-x-[100px]" : "translate-x-0"} w-[400px] transition-all duration-700 absolute top-0 right-0 h-screen`}><Settings modeChange={handleModeChange} isDarkMode={isDarkMode}/></div>}
+            {!modal && <div className={`${modal ? "translate-x-[100px]" : "translate-x-0"} w-[400px] transition-all duration-700  fixed top-0 right-0 min-h-[100vh]`}><Settings modeChange={handleModeChange} isDarkMode={isDarkMode}/></div>}
 
         </div>
       </div>
