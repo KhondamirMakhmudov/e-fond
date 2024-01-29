@@ -232,7 +232,7 @@ export default function Home() {
                 }
             />
 
-            {!modal && <div className={`${modal ? "translate-x-[100px]" : "translate-x-0"} w-[400px] transition-all duration-700  fixed top-0 right-0 min-h-[100vh]`}><Settings modeChange={handleModeChange} isDarkMode={isDarkMode}/></div>}
+            {!modal && <div className={`${modal ? "translate-x-[100px]" : "translate-x-0"} w-[300px] transition-all duration-700  fixed top-0 right-0 min-h-[100vh]`}><Settings modeChange={handleModeChange} isDarkMode={isDarkMode}/></div>}
 
         </div>
       </div>
