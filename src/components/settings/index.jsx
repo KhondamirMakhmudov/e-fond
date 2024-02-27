@@ -2,10 +2,23 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SelectButton from "@/components/button";
 
-const Index = ({ modeChange, isDarkMode, scaleColor, scaleChangeColor }) => {
+const Index = ({
+  modeChange,
+  isDarkMode,
+  scaleColor,
+  scaleChangeColor,
+  onChange,
+}) => {
   const [mode, setMode] = useState(false);
   const [close, setClose] = useState(false);
   const [fullScreen, setFullScreen] = useState(false);
+  const [selectedFontFamily, setSelectedFontFamily] = useState("");
+
+  // Function to handle font family change
+  const handleFontFamilyChange = (fontFamily) => {
+    setSelectedFontFamily(fontFamily);
+    onChange(fontFamily);
+  };
 
   const closeButton = () => {
     setClose(!close);
@@ -233,6 +246,47 @@ const Index = ({ modeChange, isDarkMode, scaleColor, scaleChangeColor }) => {
               className={`toggle-scale-circle ${scaleColor === 3 ? "scaled" : ""} bg-[#00A76F]`}
             ></div>
           </button>
+        </div>
+
+        <div
+          className={"border-[1px] border-[#A3AEB7] mt-[30px] rounded-[4px]"}
+        >
+          <h4 className={"!text-[#A3AEB7] p-2 "}>Shrift</h4>
+
+          <div className={"w-full bg-[#A3AEB7] h-[1px]"}></div>
+
+          <div
+            className={"flex flex-col text-lg text-[#A3AEB7] my-[10px] px-2"}
+          >
+            <label className={"fontFamilyOption"}>
+              <input
+                className={""}
+                type="radio"
+                value="Arial"
+                checked={selectedFontFamily === "Arial"}
+                onChange={() => handleFontFamilyChange("Arial")}
+              />
+              Arial
+            </label>
+            <label className={"fontFamilyOption"}>
+              <input
+                type="radio"
+                value="Verdana"
+                checked={selectedFontFamily === "Verdana"}
+                onChange={() => handleFontFamilyChange("Verdana")}
+              />
+              Verdana
+            </label>
+            <label className={"fontFamilyOption"}>
+              <input
+                type="radio"
+                value="Georgia"
+                checked={selectedFontFamily === "Georgia"}
+                onChange={() => handleFontFamilyChange("Georgia")}
+              />
+              Georgia
+            </label>
+          </div>
         </div>
       </div>
     </div>

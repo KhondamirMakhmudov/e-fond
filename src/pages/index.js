@@ -17,6 +17,13 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [scaleColor, setScaleColor] = useState(1);
 
+  const [fontFamily, setFontFamily] = useState("Arial");
+
+  // Function to handle font family change
+  const handleFontFamilyChange = (selectedFontFamily) => {
+    setFontFamily(selectedFontFamily);
+  };
+
   const scaleChangeColor = (index) => {
     setScaleColor(index);
   };
@@ -335,6 +342,7 @@ export default function Home() {
               isDarkMode={isDarkMode}
               scaleChangeColor={scaleChangeColor}
               scaleColor={scaleColor}
+              onChange={handleFontFamilyChange}
             />
           </div>
         )}
