@@ -32,7 +32,7 @@ export default function Home() {
     <div
       className={`${isDarkMode ? "!bg-[#3C424D]" : "!bg-white"} relative transition-all duration-700 min-h-[100vh]`}
     >
-      <Header isDarkMode={isDarkMode} />
+      <Header scaleColor={scaleColor} />
       <div
         className={`py-5 px-5 md:px-0 ${isDarkMode ? "!bg-[#3C424D] border-b-[#6B7589] border-b-[1px]" : "!bg-white"} transition-all duration-700`}
       >
@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       <div
-        className={`${isDarkMode ? "bg-[#6F7A8E] " : "bg-[#546CA6]"} bg-no-repeat bg-cover  pt-[30px] pb-[20px]  mb-[30px] px-[20px] md:px-0`}
+        className={`${scaleColor === 1 ? "bg-[#546CA6] " : scaleColor === 2 ? "bg-[#FDA92D]" : scaleColor === 3 ? "bg-[#00A76F]" : "bg-[#546CA6]"} bg-no-repeat bg-cover  pt-[30px] pb-[20px]  mb-[30px] px-[20px] md:px-0`}
       >
         <div className={"grid grid-cols-12 gap-x-[30px] container mx-auto"}>
           <form
@@ -219,6 +219,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 652:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Комбикорма, сырье. Методь определения металломагнитной примеси"
           }
@@ -227,6 +229,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt EN 13850:2021 (EN 13850:2020, IDT)"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Сосудм под давлением без огня - Часть 6: Требования к проектированию и изготовлению сосудов под давлением и деталей под давлением, изготовленных из чугуна с шаровиднмм графитом. Unfired pressure vessels - Part 6: Requirements for the design and fabrication of pressure vessels and pressure parts constructed from spheroidal graphite..."
           }
@@ -235,6 +239,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 653:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Сосуды под давлением без огня - Часть 6: Требования к проектированию и изготовлению сосудов под давлением и деталей под давлением, изготовленных из чугуна с шаровиднмм графитом. "
           }
@@ -243,6 +249,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 652:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Комбикорма, сырье. Методь определения металломагнитной примеси"
           }
@@ -251,6 +259,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 652:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Комбикорма, сырье. Методь определения металломагнитной примеси"
           }
@@ -259,6 +269,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt EN 13850:2021 (EN 13850:2020, IDT)"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Сосудм под давлением без огня - Часть 6: Требования к проектированию и изготовлению сосудов под давлением и деталей под давлением, изготовленных из чугуна с шаровиднмм графитом. Unfired pressure vessels - Part 6: Requirements for the design and fabrication of pressure vessels and pressure parts constructed from spheroidal graphite..."
           }
@@ -267,6 +279,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 653:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Сосуды под давлением без огня - Часть 6: Требования к проектированию и изготовлению сосудов под давлением и деталей под давлением, изготовленных из чугуна с шаровиднмм графитом. "
           }
@@ -275,6 +289,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 652:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Комбикорма, сырье. Методь определения металломагнитной примеси"
           }
@@ -283,6 +299,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 652:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Комбикорма, сырье. Методь определения металломагнитной примеси"
           }
@@ -291,6 +309,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 652:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Комбикорма, сырье. Методь определения металломагнитной примеси"
           }
@@ -299,6 +319,8 @@ export default function Home() {
         <Template
           isDarkMode={isDarkMode}
           code={"O‘zDSt 653:2011"}
+          scaleChangeColor={scaleChangeColor}
+          scaleColor={scaleColor}
           content={
             "Сосуды под давлением без огня - Часть 6: Требования к проектированию и изготовлению сосудов под давлением и деталей под давлением, изготовленных из чугуна с шаровиднмм графитом. "
           }
