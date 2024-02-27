@@ -2,45 +2,13 @@ import React, {useEffect, useState} from 'react';
 import Image from "next/image";
 import SelectButton from "@/components/button";
 
-const Index = ({modeChange, isDarkMode}) => {
+const Index = ({modeChange, isDarkMode, scaleColor, scaleChangeColor}) => {
     const [mode, setMode] = useState(false);
     const [close, setClose] = useState(false);
     const [fullScreen, setFullScreen] = useState(false);
-    const [isScaledBlue, setIsScaledBlue] = useState(false);
-    const [isScaledYellow, setIsScaledYellow] = useState(false);
-    const [isScaledGreen, setIsScaledGreen] = useState(false);
 
-    const handleScaleBlue = () => {
-        // Toggle the scale between 1 and 1.5 on each click
-        setIsScaledBlue((prevIsScaled) => !prevIsScaled);
 
-    };
 
-    const handleScaleYellow = () => {
-        setIsScaledYellow((prevIsScaled) => !prevIsScaled);
-
-    }
-
-    const handleScaleGreen = () => {
-        setIsScaledGreen((prevIsScaled) => !prevIsScaled);
-
-    }
-
-    const scaleChanger = () => {
-        if(!isScaledBlue) {
-            setIsScaledYellow(false);
-            setIsScaledGreen(false);
-            setIsScaledBlue((prevIsScaled) => !prevIsScaled);
-        } else if (!isScaledYellow) {
-            setIsScaledGreen(false);
-            setIsScaledBlue(false);
-            setIsScaledYellow((prevIsScaled) => !prevIsScaled);
-        } else {
-            setIsScaledBlue(false);
-            setIsScaledYellow(false);
-            setIsScaledGreen((prevIsScaled) => !prevIsScaled);
-        }
-    }
 
     const closeButton = () => {
         setClose(!close);
@@ -164,20 +132,20 @@ const Index = ({modeChange, isDarkMode}) => {
                 <h4 className={"text-[#A3AEB7] my-[30px]"}>Kontrast</h4>
 
                 <div className={"flex justify-between gap-x-2"}>
-                    <button onClick={scaleChanger} className={"px-[25px] py-[15px] border-[#E4E7EA] border-[1px] rounded-[6px]"}>
-                        <div className={`toggle-scale-circle ${isScaledBlue ? 'scaled' : ''} bg-[#078DEE]`}>
+                    <button onClick={() => scaleChangeColor(1)} className={`px-[25px] py-[15px]  border-[1px] rounded-[6px] ${scaleColor === 1 ? "bg-[#EEF2FA] border-[#EEF2FA]" : "bg-transparent border-[#E4E7EA]"} transition-all duration-300`}>
+                        <div className={`toggle-scale-circle ${scaleColor === 1 ? 'scaled' : ''} bg-[#078DEE]`}>
 
                         </div>
                     </button>
 
-                    <button onClick={scaleChanger} className={"px-[25px] py-[15px] border-[#E4E7EA] border-[1px] rounded-[6px]"}>
-                        <div className={`toggle-scale-circle ${isScaledYellow ? 'scaled' : ''} bg-[#F4CA16]`}>
+                    <button onClick={() => scaleChangeColor(2)} className={`px-[25px] py-[15px]  border-[1px] rounded-[6px] ${scaleColor === 2 ? "bg-[#FFF7EE] border-[#FFF7EE]" : "bg-transparent border-[#E4E7EA]"} transition-all duration-300`}>
+                        <div className={`toggle-scale-circle ${scaleColor === 2 ? 'scaled ' : ''} bg-[#FDA92D]`}>
 
                         </div>
                     </button>
 
-                    <button onClick={scaleChanger} className={" px-[25px] py-[15px] border-[#E4E7EA] border-[1px] rounded-[6px]"}>
-                        <div className={`toggle-scale-circle ${isScaledGreen ? 'scaled' : ''} bg-[#50C878]`}>
+                    <button onClick={() => scaleChangeColor(3)} className={`px-[25px] py-[15px]  border-[1px] rounded-[6px] ${scaleColor === 3 ? "bg-[#EBF7F3] border-[#EBF7F3]" : "bg-transparent border-[#E4E7EA]"} transition-all duration-300`}>
+                        <div className={`toggle-scale-circle ${scaleColor === 3 ? 'scaled' : ''} bg-[#00A76F]`}>
 
                         </div>
                     </button>
