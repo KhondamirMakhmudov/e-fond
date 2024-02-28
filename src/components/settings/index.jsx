@@ -96,7 +96,7 @@ const Index = ({
 
   return (
     <div
-      className={`rounded-[8px] ${!isDarkMode ? "bg-[#F1F4F7]" : "bg-[#3C424D]"}  ${close ? "opacity-0" : " opacity-100"} backdrop-blur-3xl absolute top-0 right-0 h-screen px-[20px] py-[15px] ${close ? "hidden translate-x-[100px]" : "visible translate-x-0"} duration-700 transition-all shadow-2xl`}
+      className={`rounded-[8px] ${!isDarkMode ? "bg-[#F1F4F7]" : "bg-[#3C424D]"}   backdrop-blur-3xl absolute top-0 right-0 h-screen px-[20px] py-[15px]  duration-700 transition-all shadow-2xl`}
     >
       <div className={"flex justify-between"}>
         <h1
@@ -256,9 +256,9 @@ const Index = ({
           <div className={"w-full bg-[#A3AEB7] h-[1px]"}></div>
 
           <div
-            className={"flex flex-col text-lg text-[#A3AEB7] my-[10px] px-2"}
+            className={`flex flex-col text-lg ${scaleColor === 1 ? "text-[#078DEE]" : scaleColor === 2 ? "text-[#FDA92D]" : scaleColor === 3 ? "text-[#00A76F]" : "text-[#078DEE]"} my-[10px] px-2`}
           >
-            <label className={"fontFamilyOption"}>
+            <label className={"font-family-option"}>
               <input
                 className={""}
                 type="radio"
@@ -268,16 +268,16 @@ const Index = ({
               />
               Arial
             </label>
-            <label className={"fontFamilyOption"}>
+            <label className={"font-family-option"}>
               <input
                 type="radio"
                 value="Verdana"
-                checked={selectedFontFamily === "Verdana"}
-                onChange={() => handleFontFamilyChange("Verdana")}
+                checked={selectedFontFamily === "Noto Sans"}
+                onChange={() => handleFontFamilyChange("Noto Sans")}
               />
-              Verdana
+              Noto Sans
             </label>
-            <label className={"fontFamilyOption"}>
+            <label className={"font-family-option"}>
               <input
                 type="radio"
                 value="Georgia"

@@ -62,15 +62,16 @@ body {
   transform: scale(1.5);
 }
 
-.fontFamilyOption {
+.font-family-option {
   margin-bottom: 10px;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-.fontFamilyOption input[type="radio"] {
+.font-family-option input[type="radio"] {
   margin-right: 10px;
   width: 20px;
   height: 20px;
+
 }

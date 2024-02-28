@@ -38,6 +38,7 @@ export default function Home() {
   return (
     <div
       className={`${isDarkMode ? "!bg-[#3C424D]" : "!bg-white"} relative transition-all duration-700 min-h-[100vh]`}
+      style={{ fontFamily: `${fontFamily}` }}
     >
       <Header scaleColor={scaleColor} />
       <div
@@ -333,9 +334,9 @@ export default function Home() {
           }
         />
 
-        {!modal && (
+        {modal && (
           <div
-            className={`${modal ? "translate-x-[100px]" : "translate-x-0"} w-[300px] transition-all duration-700  fixed top-0 right-0 min-h-[100vh]`}
+            className={`${!modal ? "translate-x-[100px] w-0" : "translate-x-0 fixed w-[300px]"}  transition-all duration-700   top-0 right-0 min-h-[100vh]`}
           >
             <Settings
               modeChange={handleModeChange}
