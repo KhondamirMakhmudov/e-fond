@@ -50,7 +50,7 @@ export default function Home() {
               className={
                 "flex justify-center md:justify-start items-center gap-x-3"
               }
-              href={"/"}
+              href={"https://tmsiti.uz/"}
             >
               <CustomSVG
                 fillColor={
@@ -336,7 +336,7 @@ export default function Home() {
 
         {modal && (
           <div
-            className={`${!modal ? "translate-x-[100px] w-0" : "translate-x-0 fixed w-[300px]"}  transition-all duration-700   top-0 right-0 min-h-[100vh]`}
+            className={`${!modal ? "translate-x-[100px] opacity-0" : "translate-x-0 fixed opacity-100"} w-[300px] transition-all duration-700 overflow-x-hidden   top-0 right-0 min-h-[100vh]`}
           >
             <Settings
               modeChange={handleModeChange}

@@ -96,7 +96,7 @@ const Index = ({
 
   return (
     <div
-      className={`rounded-[8px] ${!isDarkMode ? "bg-[#F1F4F7]" : "bg-[#3C424D]"}   backdrop-blur-3xl absolute top-0 right-0 h-screen px-[20px] py-[15px]  duration-700 transition-all shadow-2xl`}
+      className={`rounded-[8px] ${!isDarkMode ? "bg-[#F1F4F7]" : "bg-[#3C424D]"} ${close ? "hidden" : "absolute"}   backdrop-blur-3xl  top-0 right-0 h-screen px-[20px] py-[15px]  duration-700 transition-all shadow-2xl`}
     >
       <div className={"flex justify-between"}>
         <h1
